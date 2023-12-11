@@ -1384,3 +1384,32 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       content: "\f095"; }
     .site-footer ul.quick-info li.address:before {
       content: "\e8b4"; }
+
+.btn-100{
+  width: 50%;
+}
+
+.book{
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 1px 0 rgba(26,55,77,0.75);
+}
+
+.book > h2{
+  color: #1A374D;
+}
+
+.booking_successful{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking_successful > a{
+  text-decoration: none;
+  color: #1A374D;
+}
+

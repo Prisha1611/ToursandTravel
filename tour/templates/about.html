@@ -20,31 +20,24 @@
   <div class="untree_co-section">
     <div class="container">
       <div class="row">
+
+ {% for about in about %}
         <div class="col-lg-7">
           <div class="owl-single dots-absolute owl-carousel">
-            <img src="static/images/slider-1.jpg" alt="" class="img-fluid rounded-20">
-            <img src="static/images/slider-2.jpg" alt="" class="img-fluid rounded-20">
-            <img src="static/images/slider-3.jpg" alt="" class="img-fluid rounded-20">
-            <img src="static/images/slider-4.jpg" alt="" class="img-fluid rounded-20">
-            <img src="static/images/slider-5.jpg" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img1 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img2 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img3 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img4 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img5 }}" alt="" class="img-fluid rounded-20">
           </div>
         </div>
         <div class="col-lg-5 pl-lg-5 ml-auto">
           <h2 class="section-title mb-4">About Tours</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <ul class="list-unstyled two-col clearfix">
-            <li>Outdoor recreation activities</li>
-            <li>Airlines</li>
-            <li>Car Rentals</li>
-            <li>Cruise Lines</li>
-            <li>Hotels</li>
-            <li>Railways</li>
-            <li>Travel Insurance</li>
-            <li>Package Tours</li>
-            <li>Insurance</li>
-            <li>Guide Books</li>
+          <p>{{ about.description }}</p>
           </ul>
         </div>
+   {% endfor %}
+
       </div>
     </div>
   </div>

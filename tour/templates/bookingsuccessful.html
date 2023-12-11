@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="container-fluid booking_successful">
+        <i class="fa-solid fa-circle-check" style="color: #008500; font-size: 3rem"></i>
+        <p style="color: #008500; font-size: 3rem">Booking Successful</p>
+        <a href="{% url 'tour:index' %}"><i class="fa-solid fa-arrow-left mr-2"></i>Go back</a>
+
+
+    </div>
+
+
+{% endblock %}

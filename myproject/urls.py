@@ -15,16 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from tour import views
-app_name="tour"
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about', views.about),
-    path('contact', views.contact),
-    path('elements', views.elements),
-    path('', views.index),
-    path('main', views.main),
-    path('services', views.services),
+    path('', include('tour.urls '))
 
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

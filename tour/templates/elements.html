@@ -92,6 +92,20 @@
               <div class="col-4">
                 <a href="static/images/gal_6.jpg" class="gal-item" data-fancybox="gal"><img src="static/images/gal_6.jpg" alt="Image" class="img-fluid"></a>
               </div>
+                {% for about in about %}
+        <div class="col-lg-7">
+          <div class="owl-single dots-absolute owl-carousel">
+            <img src="/media/{{ about.img1 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img2 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img3 }}" alt="" class="img-fluid rounded-20">
+          </div>
+        </div>
+        <div class="col-lg-5 pl-lg-5 ml-auto">
+          <h2 class="section-title mb-4">Home Tours</h2>
+          <p>{{ home.description }}</p>
+          </ul>
+        </div>
+   {% endfor %}
             </div>
           </div> <!-- END .custom-block -->
 

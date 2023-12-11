@@ -24,7 +24,22 @@
         <div class="col-6 col-md-6 col-lg-3">
           <div class="media-1">
             <a href="#" class="d-block mb-3"><img src="static/images/hero-slider-1.jpg" alt="Image" class="img-fluid"></a>
-            <div class="d-flex">
+              {% for about in about %}
+        <div class="col-lg-7">
+          <div class="owl-single dots-absolute owl-carousel">
+            <img src="/media/{{ about.img1 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img2 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img3 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img4 }}" alt="" class="img-fluid rounded-20">
+          </div>
+        </div>
+        <div class="col-lg-5 pl-lg-5 ml-auto">
+          <h2 class="section-title mb-4">Services Tours</h2>
+          <p>{{services.description }}</p>
+          </ul>
+        </div>
+   {% endfor %}
+              <div class="d-flex">
               <div>
                 <h3><a href="#">Excellence in Travel</a></h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -35,6 +50,21 @@
         <div class="col-6 col-md-6 col-lg-3">
           <div class="media-1">
             <a href="#" class="d-block mb-3"><img src="static/images/hero-slider-2.jpg" alt="Image" class="img-fluid"></a>
+                 {% for about in about %}
+        <div class="col-lg-7">
+          <div class="owl-single dots-absolute owl-carousel">
+            <img src="/media/{{ about.img1 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img2 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img3 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img4 }}" alt="" class="img-fluid rounded-20">
+          </div>
+        </div>
+        <div class="col-lg-5 pl-lg-5 ml-auto">
+          <h2 class="section-title mb-4">Services Tours</h2>
+          <p>{{services.description }}</p>
+          </ul>
+        </div>
+   {% endfor %}
             <div class="d-flex">
               <div>
                 <h3><a href="#">Discovering Best</a></h3>
@@ -46,6 +76,21 @@
         <div class="col-6 col-md-6 col-lg-3">
           <div class="media-1">
             <a href="#" class="d-block mb-3"><img src="static/images/hero-slider-3.jpg" alt="Image" class="img-fluid"></a>
+                 {% for about in about %}
+        <div class="col-lg-7">
+          <div class="owl-single dots-absolute owl-carousel">
+            <img src="/media/{{ about.img1 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img2 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img3 }}" alt="" class="img-fluid rounded-20">
+            <img src="/media/{{ about.img4 }}" alt="" class="img-fluid rounded-20">
+          </div>
+        </div>
+        <div class="col-lg-5 pl-lg-5 ml-auto">
+          <h2 class="section-title mb-4">Services Tours</h2>
+          <p>{{services.description }}</p>
+          </ul>
+        </div>
+   {% endfor %}
             <div class="d-flex">
               <div>
                 <h3><a href="#">A New Moments of Life</a></h3>
