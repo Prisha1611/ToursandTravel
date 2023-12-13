@@ -54,11 +54,20 @@ class Message(models.Model):
     def __str__(self):
         return self.fname
 
-class Testimonials(models.Model):
-    description = models.TextField(max_length=7000, blank=False)
-    img1 = models.ImageField(upload_to='test', default='test.jpg')
-    img2 = models.ImageField(upload_to='test', default='test.jpg')
-    img3 = models.ImageField(upload_to='test', default='test.jpg')
+
+class Testimonial(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='testimonials/')  # Store testimonial images in MEDIA_ROOT/testimonials
+    quote = models.TextField()
 
     def __str__(self):
-        return self.description
+        return self.name
+
+
+
+class GalleryImage(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='gallery_images/')  # Stores the images in MEDIA_ROOT/gallery_images
+
+    def __str__(self):
+        return self.title

@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from .models import About, Home, Services, Booking, Message, Testimonials
+from .models import About, Home, Services, Booking, Message, Testimonial, GalleryImage
 
 
 # Create your views here.
@@ -8,9 +8,10 @@ def about(request):
     about = About.objects.all()
     return render(request, 'about.html', {"about": about})
 
-
+def contact_view(request):
+    testimonial = Testimonial.objects.all()  # Fetch all testimonials
+    return render(request, 'contact.html', {'testimonials': testimonial})
 def contact(request):
-
     return render(request, 'contact.html')
 
 
@@ -30,7 +31,6 @@ def sendmessage(request):
 
 
 def elements(request):
-    testimonials = Testimonials.objects.all()
     return render(request, 'elements.html')
 
 
@@ -69,3 +69,6 @@ def bookingsuccessful(request):
     return render(request, 'bookingsuccessful.html')
 
 
+def elements_view(request):
+    gallery_images = GalleryImage.objects.all()  # Fetch all gallery images
+    return render(request, 'elements.html', {'gallery_images': gallery_images})
